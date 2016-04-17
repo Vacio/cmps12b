@@ -106,7 +106,7 @@ class Search {
 			else{
 				q = (p+r)/2;
 				if(word[q].compareTo(target) == 0)
-					return target + "found on line " + lineNumber[q];
+					return target + " found on line " + lineNumber[q];
 				else if(word[q].compareTo(target) < 0)
 					return binarySearch(word, lineNumber, p, q, target);
 				else // target > A[q]
