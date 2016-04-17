@@ -9,4 +9,4 @@
 
 README           Table of contents for submitted files
 Makefile         Compiles Search class, submits files
-Recursion.java   Uses mergeSort and binarySearch to read file to search for target words
+Search.java   Uses mergeSort and binarySearch to read file to search for target words
