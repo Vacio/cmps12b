@@ -12,7 +12,7 @@
 
 void stringReverse(char* s) {
 	int i = 0, temp, j = strlen(s)-1;
-	for ( ; i>=j; i++) {
+	for (i=0; i<j; i++) {
 		temp = s[i];
 		s[i] = s[j];
 		s[j] = temp;
