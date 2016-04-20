@@ -20,9 +20,6 @@ void stringReverse(char* s) {
 	}
 }
 
-int main() {
-	#include<stdio.h>
-	#include<stdlib.h>
 	int main(int argc, char* argv[]){
 	FILE* in;
 	FILE* out;
