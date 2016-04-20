@@ -1,7 +1,7 @@
 FLAGS = -std=c99 -Wall
-SOURCES = hello.c
-OBJECTS = hello.o
-EXEBIN = hello
+SOURCES = FileReverse.c
+OBJECTS = FileReverse.o
+EXEBIN = FileReverse
 CHECK = ls/afs/cats.ucsc.edu/class/cmps012b-pt/lab3/bsherrif
 SUBMIT = submit cmps012b-pt.s16 lab3
 
