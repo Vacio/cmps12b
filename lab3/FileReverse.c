@@ -1,7 +1,5 @@
 /*
 * FileReverse.c
-* Ben Sherriff
-* bsherrif 1480327
 * 12M lab3
 * 4/18/16
 * Reverses lines from input and places them in output file
