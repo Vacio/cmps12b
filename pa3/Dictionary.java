@@ -24,7 +24,7 @@ public class Dictionary implements DictionaryInterface {
 	private int numItems;
 
 	// Constructor for Dictionary class
-	public Dictionary {
+	public Dictionary() {
 		head = null;
 		numItems = 0;
 	}
@@ -32,17 +32,17 @@ public class Dictionary implements DictionaryInterface {
 	// Private Functions --------------------------------------
 
 	// findKey()
-	private Node findKey(String key) {
+	/*private Node findKey(String key) {
 
-	}
+	}*/
 
 	// myString()
-	private String myString(Node H) {
+	/*private String myString(Node H) {
 		if (H == null)
 			return "";
 		else
 			return H.key + " " + H.value + "\n" + myString(H.next);
-	}
+	}*/
 
 	// ADT Operations -----------------------------------------
 
@@ -68,16 +68,16 @@ public class Dictionary implements DictionaryInterface {
 	}
 
 	// insert()
-	public void insert(String key, String value) throws DuplicatateKeyException {
+	public void insert(String key, String value) throws DuplicateKeyException {
 		if (lookup(key) != null) {
-			throw new DuplicatateKeyException("cannot insert duplicate keys");
+			throw new DuplicateKeyException("cannot insert duplicate keys");
 		} else {
 			if (head == null) {
 				Node N = new Node(key, value);
 				head = N;
 				numItems++;
 			} else {
-				Node N = head
+				Node N = head;
 				while(N != null){
 					if (N.next == null) break;
 					N = N.next;
@@ -122,6 +122,13 @@ public class Dictionary implements DictionaryInterface {
 
 	// toString()
 	public String toString() {
-		return myString(head);
+		//return myString(head);
+		String s = "";
+		Node N = head;
+		while(N != null) {
+			s += N.key + " " + N.value + "\n";
+			N = N.next;
+		}
+		return s;
 	}
 }
