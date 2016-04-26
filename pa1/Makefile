@@ -1,6 +1,5 @@
 # -----------------------------------------------------
 # Makefile
-# bsherrif
 # 12b pa1
 # 4/5/16
 # A makefile with macros, compiles Recursion class
