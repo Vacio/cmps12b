@@ -1,7 +1,5 @@
 // ---------------------------------
 // Search.java
-// Ben Sherriff
-// bsherrif 1480327
 // 12B pa2
 // 4/13/16
 // Uses mergeSort and binarySearch to read file to search for target words
