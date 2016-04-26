@@ -17,7 +17,7 @@ CLASSES    = $(patsubst %.java, %.class, $(JAVASRC))
 JARCLASSES = $(patsubst %.class, %*.class, $(CLASSES))
 JARFILE    = $(MAINCLASS) 
 SUBMIT     = submit cmps012b-pt.s16 pa3
-CHECK = ls /afs/cats.ucsc.edu/class/cmps012b-pt.s16/pa3/bsherrif
+CHECK = ls /afs/cats.ucsc.edu/class/cmps012b-pt.s16/pa3/
 
 all: $(JARFILE)
 
