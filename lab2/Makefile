@@ -1,6 +1,5 @@
 # -----------------------------------------------------
 # Makefile
-# bsherrif
 # 12M lab2
 # 4/10/16
 # A makefile with macros, compiles FileReverse class
