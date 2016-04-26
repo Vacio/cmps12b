@@ -11,7 +11,7 @@ MAINCLASS = Search
 CLASSES = Search.class
 JARFILE = Search
 SUBMIT = submit cmps012b-pt.s16 pa2
-CHECK = ls /afs/cats.ucsc.edu/class/cmps012b-pt.s16/pa2/bsherrif
+CHECK = ls /afs/cats.ucsc.edu/class/cmps012b-pt.s16/pa2/
 all: $(JARFILE)
 $(JARFILE): $(CLASSES)
   echo Main-class: $(MAINCLASS) > Manifest
