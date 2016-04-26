@@ -1,7 +1,5 @@
 // ---------------------------------------------------------------
 // Recursion.java
-// Ben Sherriff
-// bsherrif
 // 12B pa1
 // 4/3/16
 // Reverses the array 3 different ways using recursion
