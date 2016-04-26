@@ -1,7 +1,5 @@
 // ---------------------------------
 // FileReverse.java
-// Ben Sherriff
-// bsherrif
 // 12M lab2
 // 4/8/16
 // 
