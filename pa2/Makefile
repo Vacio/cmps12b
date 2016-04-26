@@ -1,7 +1,5 @@
 # -----------------------------------------------------
 # Makefile
-# Ben Sherriff
-# bsherrif
 # 12b pa1
 # 4/14/16
 # A makefile with macros, compiles Search class
