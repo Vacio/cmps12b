@@ -1,7 +1,5 @@
 // --------------------------------------------------------
 // DictionaryTest.java
-// Ben Sherriff
-// bsherrif
 // 12B pa3
 // 4/24/16
 // Test for Dictionary.java to check every part
