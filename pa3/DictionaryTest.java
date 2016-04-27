@@ -1,5 +1,7 @@
 // --------------------------------------------------------
 // DictionaryTest.java
+// Ben Sherriff
+// bsherrif
 // 12B pa3
 // 4/24/16
 // Test for Dictionary.java to check every part
@@ -29,6 +31,8 @@ class DictionaryTest {
 			System.out.println("Caught Exception " + e);
         	System.out.println("Continuing without interuption \n");
 		}
+		A.insert("4", "Reinserted");
+		System.out.println(A);
 		A.makeEmpty();
 		System.out.println("Size of list: " + A.size() + "\n");
 		try {
@@ -37,7 +41,7 @@ class DictionaryTest {
 			System.out.println("Caught Exception " + e);
         	System.out.println("Continuing without interuption");
 		}
-		
+
 	}
 }
 
@@ -65,6 +69,13 @@ Size of list: 5
 ********************************
 
 Caught Exception DuplicateKeyException
+
+1 a
+2 b
+3 c
+5 e
+6 f
+4 Reinserted
 
 Size of list: 0
 
