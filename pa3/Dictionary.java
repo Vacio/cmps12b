@@ -32,9 +32,15 @@ public class Dictionary implements DictionaryInterface {
 	// Private Functions --------------------------------------
 
 	// findKey()
-	/*private Node findKey(String key) {
-
-	}*/
+	private Node findKey(String key) {
+		Node N = head;
+		while(N != null) {
+			if(N.key != key) {
+				N = N.next;
+			} else return N;
+		}
+		return null;
+	}
 
 	// myString()
 	/*private String myString(Node H) {
@@ -58,7 +64,8 @@ public class Dictionary implements DictionaryInterface {
 
 	// lookup()
 	public String lookup(String key) {
-		Node N = head;
+		Node N = findKey(key);
+		//Node N = head;
 		while (N != null) {
 			if (N.key.equals(key))
 				return N.value;
@@ -75,7 +82,6 @@ public class Dictionary implements DictionaryInterface {
 			if (head == null) {
 				Node N = new Node(key, value);
 				head = N;
-				numItems++;
 			} else {
 				Node N = head;
 				while(N != null){
@@ -83,8 +89,8 @@ public class Dictionary implements DictionaryInterface {
 					N = N.next;
 				}
 				N.next = new Node(key, value);
-				numItems++;
 			}
+			numItems++;
 		}
 	}
 
