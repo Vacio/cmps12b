@@ -5,27 +5,34 @@ public class Simulation {
 	public static void main(String[] args) throws IOException {
 
 		/*Variables*/
-		String jobs = null /*Number of jobs, first line of input*/
+		Scanner sc = null;
+		PrintWriter report = null;
+		PrintWriter trace = null;
+		String jobs = null; /*Number of jobs, first line of input*/
 		Queue StorageC = new Queue(); /*Stores jobs from inFile*/
 		Queue Storage = new Queue();
+		int m;
 
-		/*Check command line arguments*/
-		if (args.length < 1 || > 2) {
-			System.out.println("Usage: Simultation infile");
+		try { /*Check command line arguments*/
+			if (args.length != 1) {
+				System.out.println("Usage: Simultation infile");
+				System.exit(1);
+			}
+
+			/*input*/
+			sc = new Scanner(new File(args[0]));
+			report = new PrintWriter(new FileWriter(args[0] + ".rpt"));
+			trace = new PrintWriter(new FileWriter(args[0] + ".trc"));
+		} catch(FileNotFoundException e) {
+			System.out.println("Caught Exception " + e);
 			System.exit(1);
 		}
-
-		/*input*/
-		Scanner sc = new Scanner(new File(args[0]));
-		PrintWriter report = new PrintWriter(new FileWriter(args[0] + ".rpt"));
-		PrintWriter trace = new PrintWriter(new FileWriter(args[0] + ".trc"));
 
 		m = numOfJobs(sc);
 
 		while(sc.hasNextLine()) {
-			storageC.enqueue((Job)getJob(sc));
+			StorageC.enqueue((Job)getJob(sc));
 		}
-
 
 	}
 
