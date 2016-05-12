@@ -10,7 +10,7 @@ public class QueueTest {
 
 		System.out.println(A.isEmpty());
 		System.out.println("Length: " + A.length());
-		System.out.println(A);
+		System.out.println(A); /*Print out 2,4,6,8?*/
 
 		A.dequeue();
 		A.dequeue();
@@ -20,6 +20,8 @@ public class QueueTest {
 		System.out.println("Front: " + A.peek());
 
 		A.dequeueAll();
+		System.out.println(A.isEmpty());
+		System.out.println("Length: " + A.length());
 		try {
 			System.out.println(A.peek());
 		} catch(QueueEmptyException e) {
