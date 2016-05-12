@@ -1,7 +1,5 @@
 /*-----------------------------------------------------
 Queue.java
-Ben Sherriff
-bsherrif
 12b pa4
 5/9/16
 Queue ADT
