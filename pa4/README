@@ -9,7 +9,7 @@ Simulation.java             ###########
 QueueInterface.java         NOT CHANGED
 QueueEmptyException.java    Exception handling an empty queue
 Queue.java                  Queue ADT implementation
-QueueTest.java              ############
+QueueTest.java              Test each part of the Queue ADT
 Job.java                    NOT CHANGED
 Makefile                    ############
 
