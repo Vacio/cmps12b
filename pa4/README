@@ -4,12 +4,12 @@ README
 Table of Contents for pa4
 ------------------------------------------------
 
-README                      created by you
-Simulation.java             created by you
+README                      Table of contents
+Simulation.java             ###########
 QueueInterface.java         NOT CHANGED
-QueueEmptyException.java    created by you
-Queue.java                  created by you
-QueueTest.java              created by you
+QueueEmptyException.java    Exception handling an empty queue
+Queue.java                  Queue ADT implementation
+QueueTest.java              ############
 Job.java                    NOT CHANGED
-Makefile                    provided, alter as you see fit
+Makefile                    ############
 
