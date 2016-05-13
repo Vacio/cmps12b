@@ -8,7 +8,6 @@ public class Simulation {
 		Scanner sc = null;
 		PrintWriter report = null;
 		PrintWriter trace = null;
-		//String numJobs = null; /*Number of jobs, first line of input*/
 		Queue StorageC = new Queue();
 		Queue Storage = new Queue();
 		Queue finished = new Queue();
@@ -34,8 +33,6 @@ public class Simulation {
 
 		/*Get num of jobs*/
 		m = numOfJobs(sc);
-		//numJobs = sc.nextLine();
-		//m = Integer.parseInt(numJobs);
 
 		while(sc.hasNextLine()) {
 			j = getJob(sc);
