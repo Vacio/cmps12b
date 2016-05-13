@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class Simulation {
 	public static void main(String[] args) throws IOException {
 
-		/*Variables*/
+		/* Variables*/
 		Scanner sc = null;
 		PrintWriter report = null;
 		PrintWriter trace = null;
@@ -16,13 +16,13 @@ public class Simulation {
 		Job j = null;
 		int time = 0;
 
-		try { /*Check command line arguments*/
+		try { /* Check command line arguments*/
 			if (args.length != 1) {
 				System.out.println("Usage: Simultation infile");
 				System.exit(1);
 			}
 
-			/*input*/
+			/* Input*/
 			sc = new Scanner(new File(args[0]));
 			report = new PrintWriter(new FileWriter(args[0] + ".rpt"));
 			trace = new PrintWriter(new FileWriter(args[0] + ".trc"));
@@ -31,15 +31,14 @@ public class Simulation {
 			System.exit(1);
 		}
 
-		/*Get num of jobs*/
-		m = numOfJobs(sc);
+		m = numOfJobs(sc); /*Get num of jobs*/
 
 		while(sc.hasNextLine()) {
 			j = getJob(sc);
 			StorageC.enqueue(j);
 		}
 
-		/*Trace and Report*/
+		/* Trace and Report*/
 		trace.println("Trace file: " + (args[0] + ".trc"));
 		trace.println(m + " Jobs:");
 		trace.println(StorageC.toString());
@@ -51,11 +50,11 @@ public class Simulation {
 		report.println();
 		report.println("***********************************************************");
 
-		/*Main simulation loop from (1,m-1)*/
+		/* Main simulation loop from (1,m-1)*/
 		for(int n = 1; n < m; n++) { /*Creates one less proccess than jobs*/
 			int totalWait = 0;
 			int maxWait = 0;
-			double avgWait = 0.00;
+			double avgWait = 0.0;
 
 			for(int i = 1; i < StorageC.length()+1; i++) {
 				j = (Job)StorageC.dequeue();
@@ -107,7 +106,7 @@ public class Simulation {
 						comp = compare.getFinish();
 					}
 					if (comp == -1) {
-						//?
+						/* Do Nothing?*/
 					} else if (comp < compFinal) {
 						compFinal = comp;
 						finalIndex = i;
@@ -156,7 +155,6 @@ public class Simulation {
 			avgWait = ((double)totalWait/m);
 			avgWait = (double)Math.round(avgWait*100)/100;
 			trace.println();
-			//report.println();
 			if (processors == 1)
 				report.println(processors + " processor: totalWait=" + totalWait + ", maxWait=" + maxWait + ", averageWait=" + avgWait);
 			else
@@ -172,14 +170,14 @@ public class Simulation {
 
 	}
 
-	/*Returns number of jobs needed to be completed*/
+	/* Returns number of jobs needed to be completed*/
 	public static int numOfJobs(Scanner sc) { 
 		String s = sc.nextLine();
 		int x = Integer.parseInt(s);
 		return x;
 	}
 
-	public static Job getJob(Scanner in) { /*Given in SimulationStub*/
+	public static Job getJob(Scanner in) { /* Given in SimulationStub*/
 		String[] s = in.nextLine().split(" ");
 		int a = Integer.parseInt(s[0]);
 		int d = Integer.parseInt(s[1]);
