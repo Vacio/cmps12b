@@ -11,8 +11,8 @@ public class Queue implements QueueInterface {
     Object item;
     Node next;
 
-    Node(Object x) {
-      item = x;
+    Node(Object item) {
+      this.item = item;
       next = null;
     }
   }
@@ -103,7 +103,7 @@ public class Queue implements QueueInterface {
     String s = "";
     Node N = front;
     while(N != null) {
-      s = N.item + " ";
+      s += N.item + " ";
       N = N.next;
     }
     return s;
