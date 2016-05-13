@@ -8,10 +8,11 @@ public class Simulation {
 		Scanner sc = null;
 		PrintWriter report = null;
 		PrintWriter trace = null;
-		String jobs = null; /*Number of jobs, first line of input*/
-		Queue StorageC = new Queue(); /*Stores jobs from inFile*/
+		//String numJobs = null; /*Number of jobs, first line of input*/
+		Queue StorageC = new Queue();
 		Queue Storage = new Queue();
-		int m;
+		int m = 0;
+		Job j = null;
 
 		try { /*Check command line arguments*/
 			if (args.length != 1) {
@@ -28,10 +29,33 @@ public class Simulation {
 			System.exit(1);
 		}
 
+		/*Get num of jobs*/
 		m = numOfJobs(sc);
+		//numJobs = sc.nextLine();
+		//m = Integer.parseInt(numJobs);
 
 		while(sc.hasNextLine()) {
-			StorageC.enqueue((Job)getJob(sc));
+			j = getJob(sc);
+			StorageC.enqueue(j);
+		}
+
+		/*Trace and Report*/
+		trace.println("Trace file: " + (args[0] + ".trc"));
+		trace.println(m + " Jobs:");
+		trace.println(StorageC.toString());
+		trace.println();
+
+		report.println("Report file: " + (args[0] + ".rpt"));
+		report.println(m + " Jobs:");
+		report.println(StorageC.toString());
+		report.println();
+		report.println("***********************************************************");
+
+		/*Main simulation loop from (1,m-1)*/
+		for(int n = 1; n < m; n++) { /*Creates one less proccess than jobs*/
+			int totalWait = 0;
+			int maxWait = 0;
+			double avgWait = 0.00;
 		}
 
 	}
