@@ -1,5 +1,8 @@
-int main(int argc, char*, argv) {
-	printf(getValue(3, 13, 5));
+#include<stdlib.h>
+#include<stdio.h>
+
+int main(void) {
+	printf("%d\n", getValue(3, 13, 5));
 }
 
 static int getValue(int a, int b, int n) {
