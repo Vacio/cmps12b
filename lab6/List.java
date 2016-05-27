@@ -12,11 +12,11 @@ public class List<T> implements ListInterface<T> {
       }
    }
 
-   // Class Fields
+   /* Class Fields */
    private Node head;
    private int numItems;
 
-   //Constructor
+   /* Constructor */
    public List(){
       head = null;
       numItems = 0;
