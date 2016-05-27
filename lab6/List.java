@@ -82,7 +82,7 @@ public class List<T> implements ListInterface<T> {
 
    /* remove
     deletes item from position index
-    pre: 1 <= index <= size()
+    pre: 1 <= index <= size() 
     post: items to the right of deleted item are renumbered*/
    public void remove(int index) throws ListIndexOutOfBoundsException {
       if (index < 1 || index > numItems) {
