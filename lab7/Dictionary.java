@@ -7,7 +7,7 @@ public class Dictionary implements DictionaryInterface {
       Node left;
       Node right;
 
-      Node(NewNode x) {
+      Node(Pair x) {
          item = x;
          left = null;
          right = null;
@@ -15,13 +15,13 @@ public class Dictionary implements DictionaryInterface {
    }
 
    /* Private Inner Pair */
-   private class NewNode {
+   private class Pair {
       String key;
       String value;
 
-      NewNode(String key, String value) {
+      Pair(String key, String value) {
          this.key = key;
-         thisvalue = value;
+         this.value = value;
       }
    }
 
