@@ -6,9 +6,9 @@
 JARFILE    = Dictionary
 MAINCLASS  = Dictionary
 SOURCES    = Dictionary.java DictionaryInterface.java DictionaryClient.java\
-             DuplicateKeyException.java
+             DuplicateKeyException.java KeyNotFoundException.java
 CLASSES    = Dictionary.class DictionaryInterface.class DictionaryClient.class Dictionary\$$Node.class\
-             DuplicateKeyException.class
+             DuplicateKeyException.class KeyNotFoundException.class
 
 # Build Targets
 all: $(JARFILE)
