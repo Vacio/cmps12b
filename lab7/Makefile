@@ -2,25 +2,32 @@
 #   Makefile for BST Dictionary
 #------------------------------------------------------------------------------
 
-# Variables
-JARFILE    = Dictionary
-MAINCLASS  = Dictionary
-SOURCES    = Dictionary.java DictionaryInterface.java DictionaryClient.java\
-             DuplicateKeyException.java KeyNotFoundException.java
-CLASSES    = Dictionary.class DictionaryInterface.class DictionaryClient.class Dictionary\$$Node.class\
-             DuplicateKeyException.class KeyNotFoundException.class
+JAVAC      = javac 
+MAINCLASS  = DictionaryClient
+JAVASRC    = $(wildcard *.java)
+SOURCES    = $(JAVASRC) makefile README
+CLASSES    = $(patsubst %.java, %.class, $(JAVASRC))
+JARCLASSES = $(patsubst %.class, %*.class, $(CLASSES))
+JARFILE    = $(MAINCLASS) 
+SUBMIT     = submit cmps012b-pt.s16 pa3
+CHECK = ls /afs/cats.ucsc.edu/class/cmps012b-pt.s16/pa3/
 
-# Build Targets
 all: $(JARFILE)
 
 $(JARFILE): $(CLASSES)
-   echo Main-class: $(MAINCLASS) > Manifest
-   jar cvfm $(JARFILE) Manifest $(CLASSES)
-   rm Manifest
-   chmod +x $(JARFILE)
+	echo Main-class: $(MAINCLASS) > Manifest
+	jar cvfm $(JARFILE) Manifest $(JARCLASSES)
+	chmod +x $(JARFILE)
+	rm Manifest
 
-$(CLASSES): $(SOURCES)
-   javac -Xlint $(SOURCES)  
+%.class: %.java
+	$(JAVAC) $<
 
 clean:
-   rm -f $(CLASSES) $(JARFILE)
+	rm -f *.class $(JARFILE)
+
+submit: $(SOURCES)
+	$(SUBMIT) $(SOURCES)
+
+check:
+	$(CHECK)
