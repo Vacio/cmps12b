@@ -114,7 +114,7 @@ public class Dictionary implements DictionaryInterface {
    returns the value v sucvh that (k, v) is in D, 
    or returns null if no such value v exists
    pre: none */
-   String lookup(String key) {
+   public String lookup(String key) {
       Node N;
       N = findKey(root, key);
       return (N == null ? null : N.item.value);
