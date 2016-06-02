@@ -19,9 +19,9 @@ public class Dictionary implements DictionaryInterface {
       String key;
       String value;
 
-      Pair(String key, String value) {
-         this.key = key;
-         this.value = value;
+      Pair(String k, String v) {
+         key = k;
+         value = v;
       }
    }
 
@@ -56,7 +56,7 @@ public class Dictionary implements DictionaryInterface {
       if (N != R) {
          P = R;
          while(P.left != N && P.right != N) {
-            if (N.left.key.compareToIgnoreCase(P.item.key) < 0)
+            if (N.item.key.compareToIgnoreCase(P.item.key) < 0)
                P = P.left;
             else
                P = P.right;
