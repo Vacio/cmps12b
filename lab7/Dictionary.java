@@ -68,6 +68,7 @@ public class Dictionary implements DictionaryInterface {
    /* findLeftmost()
    returns the leftmost Node in the subtree rooted at R, or NULL if R is NULL */
    Node findLeftmost(Node R) {
+      Node L = R;
       if (L != null)
          for ( ; L.left != null; L = L.left);
             return L;
