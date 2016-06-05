@@ -1,4 +1,3 @@
-
 public class Dictionary implements DictionaryInterface {
 
    /* Private Inner Node */
@@ -7,11 +6,7 @@ public class Dictionary implements DictionaryInterface {
       Node left;
       Node right;
 
-<<<<<<< HEAD
-      Node(NewNode x) {
-=======
       Node(Pair x) {
->>>>>>> origin/master
          item = x;
          left = null;
          right = null;
@@ -19,15 +14,6 @@ public class Dictionary implements DictionaryInterface {
    }
 
    /* Private Inner Pair */
-<<<<<<< HEAD
-   private class NewNode {
-      String key;
-      String value;
-
-      NewNode(String key, String value) {
-         this.key = key;
-         thisvalue = value;
-=======
    private class Pair {
       String key;
       String value;
@@ -35,7 +21,6 @@ public class Dictionary implements DictionaryInterface {
       Pair(String k, String v) {
          key = k;
          value = v;
->>>>>>> origin/master
       }
    }
 
@@ -70,11 +55,7 @@ public class Dictionary implements DictionaryInterface {
       if (N != R) {
          P = R;
          while(P.left != N && P.right != N) {
-<<<<<<< HEAD
-            if (N.left.key.compareToIgnoreCase(P.item.key) < 0)
-=======
             if (N.item.key.compareToIgnoreCase(P.item.key) < 0)
->>>>>>> origin/master
                P = P.left;
             else
                P = P.right;
@@ -86,10 +67,7 @@ public class Dictionary implements DictionaryInterface {
    /* findLeftmost()
    returns the leftmost Node in the subtree rooted at R, or NULL if R is NULL */
    Node findLeftmost(Node R) {
-<<<<<<< HEAD
-=======
       Node L = R;
->>>>>>> origin/master
       if (L != null)
          for ( ; L.left != null; L = L.left);
             return L;
@@ -225,8 +203,4 @@ public class Dictionary implements DictionaryInterface {
       printInOrder(root);
       return "";
    }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> origin/master
