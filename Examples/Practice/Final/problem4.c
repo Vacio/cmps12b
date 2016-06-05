@@ -36,4 +36,3 @@ int main(void) {
   printf("print3");
   printf("%s", cat(A,B));
 }
-}
