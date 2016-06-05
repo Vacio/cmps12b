@@ -32,7 +32,7 @@ void freeNode(Node* pN) {
 // C
 void clearList(Node H) {
   while (H != NULL) {
+    clearList(H->next);
     freeNode(H);
-    H = H.next;
   }
 }
