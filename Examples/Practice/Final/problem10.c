@@ -5,17 +5,34 @@
  C. A recursive function with heading void clearList(Node H) that frees all heap memory associated
     with a linked list headed by H */
 
+typedef struct  NodeObj {
+  int item;
+  struct NodeObj* next;
+} NodeObj;
+
+typedef NodeObj* Node;
+
 // A
 Node new Node(int x) {
-
+  Node N = malloc(sizeof(Node));
+  assert( N!= NULL);
+  N->item = x;
+  N->next = NULL;
+  return(N);
 }
 
 // B
 void freeNode(Node* pN) {
-
+  if (pN != NULL && *pN != NULL) {
+    free(*pN);
+    *pN = NULL;
+  }
 }
 
 // C
 void clearList(Node H) {
-
+  while (H != NULL) {
+    freeNode(H);
+    H = H.next;
+  }
 }
