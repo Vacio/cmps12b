@@ -1,10 +1,4 @@
-/*Yugraj Singh w1234081
- *Search.java
- *
- * This Program reads in a file from the command line to search for 'target' words
- * entered in as ars[1]...args[n]. Uses mergeSort and binarySearch
- *
- */
+
 
 import java.io.*;
 import java.util.Scanner;
