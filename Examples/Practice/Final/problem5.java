@@ -5,12 +5,12 @@ void sortWords(String[] W) {
   int i, j;
   String temp;
   for(j=1; j<W.length(); j++) {
-    temp = w[j];
+    temp = W[j];
     i = j-1;
-    while(i >= 0 && temp.compareTo(w[i]) < 0) {
-      w[i+1] = w[i];
+    while(i >= 0 && temp.compareTo(W[i]) < 0) {
+      W[i+1] = W[i];
       i--;
     }
-    w[i+1] = temp;
+    W[i+1] = temp;
   }
 }
