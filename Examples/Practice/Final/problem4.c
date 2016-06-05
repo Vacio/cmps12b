@@ -20,7 +20,7 @@ char* cat (char* s1, char* s2) {
     concat[i] = s1[i];
   }
   int i = 0;
-  for(j = l1; j < l2; j++) {
+  for(j = l1; j < length; j++) {
     concat[j] = s2[i];
     i++;
   }
