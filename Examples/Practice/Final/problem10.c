@@ -33,6 +33,6 @@ void freeNode(Node* pN) {
 void clearList(Node H) {
   while (H != NULL) {
     clearList(H->next);
-    freeNode(H);
+    freeNode(&H);
   }
 }
