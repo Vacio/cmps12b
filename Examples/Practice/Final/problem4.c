@@ -26,3 +26,14 @@ char* cat (char* s1, char* s2) {
   }
   return concat;
 }
+
+int main(void) {
+  printf("print1");
+  char* A = "hello \0";
+  printf("print2");
+  char* B = "world \0";
+  
+  printf("print3");
+  printf("%s", cat(A,B));
+}
+}
